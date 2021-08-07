@@ -1369,3 +1369,4 @@ Received Import Request.
 Start importing Assets/Textures/Pills.mat using Guid(78cfe71dd55bd5e4d83c4ce1004c1628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a93044efc7d6bd44a40fd9fa74c6c03') in 0.015582 seconds
   Import took 0.018492 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
