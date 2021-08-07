@@ -1,21 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Scripts.Player
 {
 public class Bonus_types : IColletable
 
 {
-    private List<Bonus_types> _positivBonus = new List<Bonus_types>(3);
+        private List<Bonus_types> _positivBonus = new List<Bonus_types>(3);
     private List <Bonus_types> _negativBonus;
    
-    private Player_affix affix;
-    public Bonus_types (int _id, string _descr, float _duration)
-    {
-       
-    }
-    public void Fill_bonus()
+    private Player_affix _affix;
+    public Bonus_types (int _id, string _descr, float _duration) { }
+        public void Fill_bonus()
     {
         _positivBonus.Add(new Bonus_types(1,"Speed double",30));
         _positivBonus.Add(new Bonus_types (2,"God Mode",10));
@@ -26,9 +25,10 @@ public class Bonus_types : IColletable
         _negativBonus.Add(new Bonus_types(3, "Lower Score", 0));
     }
 
-        public void Collected()
+        public void Collected() //Допилить
         {
-            affix.Player_speed(true, 2, 30);
+            _affix.Player_speed(true, 2, 30);
+           
         }
 }
 }

@@ -1300,3 +1300,72 @@ Received Import Request.
 Start importing Assets/Scripts/Bonuses/Bonus_types.cs using Guid(de39cc84d7d710549a90459bf2593417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cf5cf50fb1ddf77098925d9813b9a1e') in 0.006634 seconds
   Import took 0.009284 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000832 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.010 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1114 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 57.6 MB.
+System memory in use after: 57.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1717.
+Total: 2.090700 ms (FindLiveObjects: 0.209200 ms CreateObjectMapping: 0.052100 ms MarkObjects: 1.763900 ms  DeleteObjects: 0.063300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1582.863226 seconds.
+  path: Assets/Scripts/Bonuses/Bonus_types.cs
+  artifactKey: Guid(de39cc84d7d710549a90459bf2593417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Bonuses/Bonus_types.cs using Guid(de39cc84d7d710549a90459bf2593417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c693ed52ae556539a4306a7faf6870a') in 0.005147 seconds
+  Import took 0.007729 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 139.265405 seconds.
+  path: Assets/Textures/changing_wall.mat
+  artifactKey: Guid(f1a43ba3a8ff7654d9f7341d5226bac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/changing_wall.mat using Guid(f1a43ba3a8ff7654d9f7341d5226bac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1629f85b82d89b560bcf353f881f1dab') in 0.143252 seconds
+  Import took 0.145710 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 778.603401 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0680538e3bf6205c8fcff5f1ca17e6d') in 0.011267 seconds
+  Import took 0.014020 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 379.638294 seconds.
+  path: Assets/Textures/Pills.mat
+  artifactKey: Guid(78cfe71dd55bd5e4d83c4ce1004c1628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Pills.mat using Guid(78cfe71dd55bd5e4d83c4ce1004c1628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf80159518183d7c19dc0bd3925e8f85') in 0.027954 seconds
+  Import took 0.031175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 461.571259 seconds.
+  path: Assets/Textures/changing_wall.mat
+  artifactKey: Guid(f1a43ba3a8ff7654d9f7341d5226bac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/changing_wall.mat using Guid(f1a43ba3a8ff7654d9f7341d5226bac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2563c19f7c35851f9164dbcb17935e20') in 0.021771 seconds
+  Import took 0.024537 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Textures/Pills.mat
+  artifactKey: Guid(78cfe71dd55bd5e4d83c4ce1004c1628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Pills.mat using Guid(78cfe71dd55bd5e4d83c4ce1004c1628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a93044efc7d6bd44a40fd9fa74c6c03') in 0.015582 seconds
+  Import took 0.018492 seconds .
+
