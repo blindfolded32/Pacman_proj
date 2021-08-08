@@ -1,28 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace Scripts.Player
 { 
+ [Serializable]   
 public class Player_affix 
 
 {
-        private Player_move _movement;
-    public void Player_speed(bool affected,float affix, int duration )
+        public int _pill_score = 100;
+        public float _affix_score = 1.0f;
+        public float _affix_move = 1.0f;
+
+        public void Player_speed(bool affected,float affix, int duration )
+      {
+            float _start_time = Time.time;
+            if (!(affected && _start_time + Time.time < duration)) _affix_move = 1.0f;
+            else _affix_move = affix;
+
+        }
+
+    public void Score_affix (bool affected, float affix, int duration)
     {
         float _start_time = Time.time;
-        if (affected) while (_start_time + Time.time < duration) _movement.MoveSpeed*= affix;
-
+            if (!(affected && _start_time + Time.time < duration)) _affix_score = 1.0f;
+            else _affix_score = affix;
 
     }
-
-    public float Player_score (float score, bool affected, float affix, int duration)
-    {
-        float _start_time = Time.time;
-        if (affected) while (_start_time + Time.time < duration) score += affix; //Допилить нормально. кушаешь таблетку и считаем аффикс
-
-        return score;
     }
-
-}
 }
