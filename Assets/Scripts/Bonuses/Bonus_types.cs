@@ -9,10 +9,11 @@ namespace Scripts.Player
 public class Bonus_types : IColletable
 
 {
-        private List<Bonus_types> _positivBonus = new List<Bonus_types>(3);
+        private List<Bonus_types> _positivBonus;
     private List <Bonus_types> _negativBonus;
    
     private Player_affix _affix;
+        public Bonus_types() { }
     public Bonus_types (int _id, string _descr, float _duration) { }
         public void Fill_bonus()
     {
@@ -25,11 +26,16 @@ public class Bonus_types : IColletable
         _negativBonus.Add(new Bonus_types(3, "Lower Score", 0));
     }
 
-        public void Collected() //Допилить
+        public void Speed_Collected() //Допилить
         {
             _affix.Player_speed(true, 2, 30);
            
         }
-}
+        public void Score_Collected() //Допилить
+        {
+            _affix.Score_affix(true, 2, 30);
+
+        }
+    }
 }
 

@@ -4,10 +4,9 @@ using UnityEngine;
 
 namespace Scripts.Player
 {
-    public interface IColletable
+
+    public class Pills : MonoBehaviour
     {
-        void Speed_Collected();
-        void Score_Collected();
+
     }
 }
-
