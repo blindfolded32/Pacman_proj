@@ -8,23 +8,16 @@ public class PlayerControl : MonoBehaviour, IDisposable
     [SerializeField]public float MoveSpeed = 2.0f;
     [SerializeField]private float speedOriginal;
     private bool isPlayerInvulnerable = false;
-
-
     //
     private CharacterController _MovementControl;
     private Vector3 _MoveDirection = Vector3.zero;
     public float RotateSpeed = 1.0f;
-
     //
-
     private float _pillCount;
     [SerializeField] private float _scoreMultiplier = 1.0f;
     private float _savedScore;
     [SerializeField] private float _score = 0.0f;
     private float _pillScore = 100.0f;
-
-
-
     void Start()
     {
         speedOriginal = MoveSpeed;
@@ -32,7 +25,6 @@ public class PlayerControl : MonoBehaviour, IDisposable
         //
         _pillCount = GameObject.FindGameObjectsWithTag("Pill").Length;
         _savedScore = _scoreMultiplier;
-
     }
     public void SetSpeedBoostOn(float speedMultiplier) => MoveSpeed *= speedMultiplier;
     public void SetSpeedBoostOff() => MoveSpeed = speedOriginal;

@@ -35,7 +35,8 @@ public class GodModeBonus : Bonuses
             if (_duration < 0)
             {
                 BonusEnding();
-            }
+                Dispose(gameObject);
+                }
         }
     }
 }

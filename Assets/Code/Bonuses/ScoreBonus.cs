@@ -33,7 +33,8 @@ public class ScoreBonus : Bonuses
             if (_duration < 0)
             {
                 BonusEnding();
-            }
+                Dispose(gameObject);
+                }
         }
 
     }

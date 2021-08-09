@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -7,8 +6,6 @@ namespace Scripts.Game
 {
 public class Bonuses : MonoBehaviour, IDisposable
 {
-
-   // public bool expiresImmediately;
         GameObject go;
         protected PlayerControl _playerControl;
     protected enum Bonus_state
@@ -44,13 +41,13 @@ public class Bonuses : MonoBehaviour, IDisposable
         _bonus_state = Bonus_state.IsCollected;
         _playerControl = go_player.GetComponent<PlayerControl>();
         GotBonus();
-       // ExecuteEvents.Execute<IBonusCollected>(go, null, (x, y) => x.OnBonusCollected(this, _playerControl));
+        ExecuteEvents.Execute<IBonusCollected>(go, null, (x, y) => x.OnBonusCollected(this, _playerControl));
         ExecuteEvents.Execute<IBonusCollected>(go, null, (x, y) => x.OnPillBonusCollected(this, _playerControl));
         }
 
     protected virtual void GotBonus()
     {
-        Debug.Log("Power Up collected, issuing payload for: " + gameObject.name);
+        Debug.Log("Got It: ");
     }
 
     protected virtual void BonusEnding()
@@ -61,6 +58,7 @@ public class Bonuses : MonoBehaviour, IDisposable
         }
         _bonus_state = Bonus_state.IsExpiring;
             ExecuteEvents.Execute<IBonusCollected>(go, null, (x, y) => x.OnBonusExpired(this, _playerControl));
+               
     }
 
     public void Dispose(GameObject obj)
