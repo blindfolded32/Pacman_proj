@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Scripts.Player
 {
-    public class Player_move : MonoBehaviour, IDisposable
+    public class Player_move : MonoBehaviour, IDisposable, IPlayerAffix
     {
 
         private int _pill_count;
@@ -33,25 +33,10 @@ namespace Scripts.Player
                 _MoveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
                 _MoveDirection = transform.TransformDirection(_MoveDirection);
             _MoveDirection *= (MoveSpeed * _affix._affix_move);
-
+            Debug.Log(_affix._affix_move);
             _MovementControl.Move(_MoveDirection * Time.deltaTime);
             transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
         }
-     /*   private void OnCollisionEnter(Collision collision)
-        {
-            Debug.Log("Collide");
-            if (collision.collider.CompareTag("Pill"))
-            {
-                Dispose(collision.gameObject);
-                _pill_count--;
-                score += (PillScore * _affix._affix_score);
-                Debug.Log(_pill_count);
-
-            }
-            if (_pill_count == 0) Debug.Log("Victory");
-            
-        }*/
-
 
         private void OnTriggerEnter(Collider other)
         {
@@ -61,7 +46,7 @@ namespace Scripts.Player
                 Dispose(other.gameObject);
                 _pill_count--;
                 score += (PillScore * _affix._affix_score);
-                Debug.Log(_pill_count);
+               // Debug.Log(_pill_count);
 
             }
             if (_pill_count == 0) Debug.Log("Victory");
@@ -70,6 +55,16 @@ namespace Scripts.Player
         {
             //Debug.Log($"Kill {obj.name}");
             Destroy(obj);
+        }
+
+        public void Speeding_player(float speedaffix)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Scoring_player(float scoreaffix)
+        {
+            throw new NotImplementedException();
         }
     }
 }
