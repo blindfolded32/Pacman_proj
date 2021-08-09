@@ -2,25 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GodModeBonus : Bonuses
+namespace Scripts.Game
 {
-    private float _duration = 5f;
 
-    protected override void PowerUpPayload()
+public class SpeedBonus : Bonuses
+{
+    private float speedMultiplier = 2.0f;
+    private float _duration = 10.0f;
+
+
+    protected override void GotBonus()
     {
-        base.PowerUpPayload();
-        _playerControl.SetInvulnerability(true);
-        
+        base.GotBonus();
+        _playerControl.SetSpeedBoostOn(speedMultiplier);
     }
 
     protected override void BonusEnding()
     {
-        if (_bonus_state == Bonus_state.IsExpiring)
-        {
-            return;
-        }
-        _playerControl.SetInvulnerability(false);
-        
+        _playerControl.SetSpeedBoostOff();
         base.BonusEnding();
     }
 
@@ -28,11 +27,15 @@ public class GodModeBonus : Bonuses
     {
         if (_bonus_state == Bonus_state.IsCollected)
         {
+           
             _duration -= Time.deltaTime;
+            Debug.Log(_duration);
             if (_duration < 0)
             {
                 BonusEnding();
             }
         }
+
     }
+}
 }

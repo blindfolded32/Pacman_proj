@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+namespace Scripts.Game 
+{
 public class Bonuses : MonoBehaviour, IDisposable
 {
 
-    public bool expiresImmediately;
-    GameObject go;
-    protected PlayerControl _playerControl;
+   // public bool expiresImmediately;
+        GameObject go;
+        protected PlayerControl _playerControl;
     protected enum Bonus_state
     {
-        InAttractMode,
-        IsCollected,
-        IsExpiring
+        IsExpiring,
+        IsCollected
     }
 
-    protected Bonus_state _bonus_state;
+   protected Bonus_state _bonus_state;
   void Start()
     {
-        _bonus_state = Bonus_state.InAttractMode;
         go = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -37,30 +37,20 @@ public class Bonuses : MonoBehaviour, IDisposable
             return;
         }
 
-        if (_bonus_state == Bonus_state.IsCollected || _bonus_state == Bonus_state.IsExpiring)
+        if (_bonus_state == Bonus_state.IsCollected || _bonus_state != Bonus_state.IsExpiring)
         {
             return;
         }
         _bonus_state = Bonus_state.IsCollected;
-
-        // We must have been collected by a player, store handle to player for later use      
         _playerControl = go_player.GetComponent<PlayerControl>();
-  
-        PowerUpPayload();
-   
-            ExecuteEvents.Execute<IBonusCollected>(go, null, (x, y) => x.OnBonusCollected(this, _playerControl));
-      
-    }
+        GotBonus();
+       // ExecuteEvents.Execute<IBonusCollected>(go, null, (x, y) => x.OnBonusCollected(this, _playerControl));
+        ExecuteEvents.Execute<IBonusCollected>(go, null, (x, y) => x.OnPillBonusCollected(this, _playerControl));
+        }
 
-    protected virtual void PowerUpPayload()
+    protected virtual void GotBonus()
     {
         Debug.Log("Power Up collected, issuing payload for: " + gameObject.name);
-
-        // If we're instant use we also expire self immediately
-        if (expiresImmediately)
-        {
-            BonusEnding();
-        }
     }
 
     protected virtual void BonusEnding()
@@ -70,16 +60,12 @@ public class Bonuses : MonoBehaviour, IDisposable
             return;
         }
         _bonus_state = Bonus_state.IsExpiring;
-
-        // Send message to any listeners
-      
             ExecuteEvents.Execute<IBonusCollected>(go, null, (x, y) => x.OnBonusExpired(this, _playerControl));
-   
-
     }
 
     public void Dispose(GameObject obj)
     {
         Destroy(obj);
     }
+}
 }

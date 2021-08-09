@@ -2,21 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedBonus : Bonuses
+namespace Scripts.Game
 {
-    private float speedMultiplier = 2.0f;
+
+public class ScoreBonus : Bonuses
+{ 
+    private float _scoreMultiplier = 2.0f;
     private float _duration = 10.0f;
 
 
-    protected override void PowerUpPayload()
+    protected override void GotBonus()
     {
-        base.PowerUpPayload();
-        _playerControl.SetSpeedBoostOn(speedMultiplier);
+        base.GotBonus();
+        _playerControl.SetScoreBoostOn(_scoreMultiplier);
     }
 
     protected override void BonusEnding()
     {
-        _playerControl.SetSpeedBoostOff();
+        _playerControl.SetScoreBoostOff();
         base.BonusEnding();
     }
 
@@ -24,7 +27,7 @@ public class SpeedBonus : Bonuses
     {
         if (_bonus_state == Bonus_state.IsCollected)
         {
-           
+
             _duration -= Time.deltaTime;
             Debug.Log(_duration);
             if (_duration < 0)
@@ -34,4 +37,5 @@ public class SpeedBonus : Bonuses
         }
 
     }
+}
 }
