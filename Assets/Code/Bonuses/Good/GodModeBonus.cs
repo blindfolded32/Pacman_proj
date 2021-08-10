@@ -18,7 +18,7 @@ public class GodModeBonus : Bonuses
 
     protected override void BonusEnding()
     {
-        if (_bonus_state == Bonus_state.IsExpiring)
+        if (IsExpiring)
         {
             return;
         }
@@ -29,7 +29,7 @@ public class GodModeBonus : Bonuses
 
     private void Update()
     {
-        if (_bonus_state == Bonus_state.IsCollected)
+        if (IsCollected)
         {
             _duration -= Time.deltaTime;
             if (_duration < 0)
