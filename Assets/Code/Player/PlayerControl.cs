@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.Debug;
 
 
 public class PlayerControl : MonoBehaviour, IDisposable
@@ -60,7 +61,7 @@ public class PlayerControl : MonoBehaviour, IDisposable
             _score += (_pillScore * _scoreMultiplier);
             Dispose(other.gameObject);
         }
-        if (_pillCount == 0) Debug.Log("Victory");
+        if (_pillCount == 0) Log("Victory");
     }
     public void Dispose(GameObject obj) => Destroy(obj);
     

@@ -1,5 +1,5 @@
-
 using UnityEngine;
+using static UnityEngine.Debug;
 using UnityEngine.EventSystems;
 
 namespace Scripts.Game 
@@ -47,7 +47,7 @@ public class Bonuses : MonoBehaviour, IDisposable
 
     protected virtual void GotBonus()
     {
-        Debug.Log("Got It: ");
+       Log("Got It: ");
     }
 
     protected virtual void BonusEnding()

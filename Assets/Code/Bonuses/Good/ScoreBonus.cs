@@ -7,15 +7,17 @@ namespace Scripts.Game
 
 public class ScoreBonus : Bonuses
 { 
-    private float _scoreMultiplier = 2.0f;
-    private float _duration = 10.0f;
+        private float _goodScoreMultiplier = 2.0f;
+        private float _badScoreMultiplier = 0.5f;
+        private float _duration = 10.0f;
 
 
     protected override void GotBonus()
     {
         base.GotBonus();
-        _playerControl.SetScoreBoostOn(_scoreMultiplier);
-    }
+            if (gameObject.GetComponent("Marker_good")) _playerControl.SetSpeedBoostOn(_goodScoreMultiplier);
+            if (gameObject.GetComponent("Marker_bad")) _playerControl.SetSpeedBoostOn(_badScoreMultiplier);
+        }
 
     protected override void BonusEnding()
     {
