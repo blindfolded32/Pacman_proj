@@ -40,14 +40,14 @@ namespace Scripts.Game
             IsCollected= true;
             _playerControl = go_player.GetComponent<PlayerControl>();
 
-            _enemyGO = GameObject.FindObjectsOfType<EnemyControl>();
-            
-          /*  foreach (GameObject enemy in _enemyGO)
+            _enemyGO = FindObjectsOfType<EnemyControl>();
+
+          foreach (var enemy in _enemyGO)
             {
                 EnemyControl enemyControl = enemy.GetComponent<EnemyControl>();
-
-                ExecuteEvents.Execute<IEnemyMoving>(enemy, null, (x, y) => x.Flee(this,enemyControl));
-            }*/
+                GameObject temp = enemy.gameObject;
+                ExecuteEvents.Execute<IEnemyMoving>(temp, null, (x, y) => x.Flee(this,enemyControl));
+            }
             GotBonus();
             ExecuteEvents.Execute<IBonusCollected>(go, null, (x, y) => x.OnBonusCollected(this, _playerControl));  // сделать под словари
             ExecuteEvents.Execute<IBonusCollected>(go, null, (x, y) => x.OnPillBonusCollected(this, _playerControl)); // сделать под словари
