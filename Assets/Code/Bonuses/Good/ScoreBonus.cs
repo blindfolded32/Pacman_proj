@@ -9,7 +9,7 @@ public class ScoreBonus : Bonuses
 { 
         private float _goodScoreMultiplier = 2.0f;
         private float _badScoreMultiplier = 0.5f;
-        private float _duration = 10.0f;
+        private float _bonusDuration = 10.0f;
 
 
     protected override void GotBonus()
@@ -27,12 +27,12 @@ public class ScoreBonus : Bonuses
 
     private void Update()
     {
-        if (_bonus_state == Bonus_state.IsCollected)
+        if (IsCollected)
         {
 
-            _duration -= Time.deltaTime;
-            Debug.Log(_duration);
-            if (_duration < 0)
+            _bonusDuration -= Time.deltaTime;
+            Debug.Log(_bonusDuration);
+            if (_bonusDuration < 0)
             {
                 BonusEnding();
                 Dispose(gameObject);

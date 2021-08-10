@@ -11,7 +11,7 @@ public class SpeedBonus : Bonuses
        
         private float _goodSpeedMultiplier = 2.0f;
         private float _badSpeedMultiplier = 0.5f;
-        private float _duration = 10.0f;
+        private float _bonusDuration = 10.0f;
 
 
     protected override void GotBonus()
@@ -35,12 +35,12 @@ public class SpeedBonus : Bonuses
 
     private void Update()
     {
-        if (_bonus_state == Bonus_state.IsCollected)
+        if (IsCollected)
         {
            
-            _duration -= Time.deltaTime;
+            _bonusDuration -= Time.deltaTime;
            // Debug.Log(_duration);
-            if (_duration < 0)
+            if (_bonusDuration < 0)
             {
                 BonusEnding();
                     Dispose(gameObject);
