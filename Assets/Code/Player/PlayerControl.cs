@@ -26,7 +26,7 @@ public class PlayerControl : MonoBehaviour, IDisposable
     public float shakeDuration = .8f;
     private Quaternion _originalRotation;
         //
-        protected Bonuses _bonus;
+        protected Bonuses[] _bonuses;
     void Start()
     {
         _speedOriginal = MoveSpeed;
@@ -36,46 +36,49 @@ public class PlayerControl : MonoBehaviour, IDisposable
         _savedScore = _scoreMultiplier;
         //
         _originalRotation = Camera.main.transform.localRotation;
-            OnBonusCollect();
+        OnBonusCollect();
     }
 
         private void OnBonusCollect()
         {
-            _bonus = FindObjectOfType<Bonuses>();
-            _bonus.OnCollected += (type,mod) => { ChooseBonus(type,mod); } ;
+            _bonuses = FindObjectsOfType<Bonuses>();
+            foreach (var bonus in _bonuses)
+            bonus.OnCollected += (type,mod) => { Log("hear touch"); ChooseBonus(type,mod);} ;
         }
         private void ChooseBonus(string type, object mod)
         {
+           Log($"boosting {type} to {mod}");
             switch (type)
             {
                 case "MoveSpeed":
                     SetSpeedBoostOn((float)mod);
                     StartCoroutine(BonusDuration(10));
-                    SetSpeedBoostOff();
+                   
                     break;
                 case "Score":
                     SetScoreBoostOn((float)mod);
                     StartCoroutine(BonusDuration(10));
-                    SetScoreBoostOff();
+                   
                     break;
                 case "GodMode":
                     SetGodModeOn();
                     StartCoroutine(BonusDuration(10));
-                    SetGodModeOff();
+                  
                     break;
             }
         }
     public void SetSpeedBoostOn(float speedMultiplier)
     {
         MoveSpeed *= speedMultiplier;
-        Shake();
+            Log($"boosting {MoveSpeed} to {speedMultiplier}");
+            Shake();
     }
     public void SetSpeedBoostOff() => MoveSpeed = _speedOriginal;
     public void SetScoreBoostOn(float scoreMultiplier) => _scoreMultiplier *= scoreMultiplier;
     public void SetScoreBoostOff() => _scoreMultiplier = _savedScore;
     public void SetGodModeOn()=> _isPlayerInvulnerable = true;
     public void SetGodModeOff() => _isPlayerInvulnerable = false;
-        private void Update()
+    private void Update()
     {
         Movement();
     }

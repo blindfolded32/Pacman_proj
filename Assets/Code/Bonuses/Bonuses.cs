@@ -26,7 +26,6 @@ namespace Scripts.Game
         }
         void OnTriggerEnter(Collider other)
         {
-            // BonusCollected(other.gameObject);
             if (!other.CompareTag("Player"))
             {
                 return;
@@ -34,6 +33,9 @@ namespace Scripts.Game
 
             if (gameObject.GetComponent("Marker_good")) OnCollected?.Invoke(_bonus_types[0],_goodMultiplier);
             if (gameObject.GetComponent("Marker_bad")) OnCollected?.Invoke(_bonus_types[0], _badMultiplier);
+               
+
+           Dispose(gameObject);
         }
 
         public void Dispose(GameObject obj) => Destroy(obj);
