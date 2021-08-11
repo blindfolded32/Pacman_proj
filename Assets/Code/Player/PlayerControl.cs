@@ -43,7 +43,7 @@ public class PlayerControl : MonoBehaviour, IDisposable
         {
             _bonuses = FindObjectsOfType<Bonuses>();
             foreach (var bonus in _bonuses)
-            bonus.OnCollected += (type,mod) => { Log("hear touch"); ChooseBonus(type,mod);} ;
+            bonus.OnCollected += (type,mod) =>  ChooseBonus(type,mod);
         }
         private void ChooseBonus(string type, object mod)
         {
