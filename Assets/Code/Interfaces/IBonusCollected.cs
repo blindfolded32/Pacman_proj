@@ -5,9 +5,9 @@ namespace Scripts.Game
     public interface IBonusCollected : IEventSystemHandler
 
     {
-        void OnBonusCollected(Bonuses bonus, PlayerControl player);
-        void OnBonusExpired(Bonuses bonus, PlayerControl player);
-        void OnPillBonusCollected(Bonuses bonus, PlayerControl player);
-        void OnPillBonusExpired(Bonuses bonus, PlayerControl player);
+        void OnBonusCollected(float bonus, PlayerControl player);
+        void OnBonusExpired(PlayerControl player);
+        void OnPillBonusCollected(float bonus, PlayerControl player);
+        void OnPillBonusExpired(PlayerControl player);
     }
 }
