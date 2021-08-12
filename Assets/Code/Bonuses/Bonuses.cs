@@ -3,6 +3,7 @@ using static UnityEngine.Debug;
 using System.Collections.Generic;
 using System.Collections;
 using System;
+using Random = UnityEngine.Random;
 
 namespace Scripts.Game
 {
@@ -12,6 +13,7 @@ namespace Scripts.Game
         private float _badMultiplier = 0.5f;
         public delegate void Bonus (string type,object modifier);
         public event Bonus OnCollected;
+        
 
         private List<string> _bonus_types;
 
@@ -19,7 +21,7 @@ namespace Scripts.Game
         {
             _bonus_types = new List<string>
             {
-                "MoveSpeed" ,
+                "MoveSpeed",
                 "Score",
                 "GodMode",
             };
@@ -30,9 +32,9 @@ namespace Scripts.Game
             {
                 return;
             }
-
-            if (gameObject.GetComponent("Marker_good")) OnCollected?.Invoke(_bonus_types[0],_goodMultiplier);
-            if (gameObject.GetComponent("Marker_bad")) OnCollected?.Invoke(_bonus_types[0], _badMultiplier);
+            
+            if (gameObject.GetComponent("Marker_good")) OnCollected?.Invoke(_bonus_types[Random.Range(0,_bonus_types.Count)],_goodMultiplier);
+            if (gameObject.GetComponent("Marker_bad")) OnCollected?.Invoke(_bonus_types[Random.Range(0, _bonus_types.Count)], _badMultiplier);
                
 
            Dispose(gameObject);
