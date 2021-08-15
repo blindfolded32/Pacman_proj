@@ -32,10 +32,27 @@ namespace Scripts.Game
             {
                 return;
             }
+<<<<<<< HEAD
+            IsCollected= true;
+            _playerControl = go_player.GetComponent<PlayerControl>();
+
+            _enemyGO = FindObjectsOfType<EnemyControl>();
+
+          foreach (var enemy in _enemyGO)
+            {
+                EnemyControl enemyControl = enemy.GetComponent<EnemyControl>();
+                GameObject temp = enemy.gameObject;
+                ExecuteEvents.Execute<IEnemyMoving>(temp, null, (x, y) => x.Flee(this,enemyControl));
+            }
+            GotBonus();
+            ExecuteEvents.Execute<IBonusCollected>(go, null, (x, y) => x.OnBonusCollected(this, _playerControl));  // сделать под словари
+            ExecuteEvents.Execute<IBonusCollected>(go, null, (x, y) => x.OnPillBonusCollected(this, _playerControl)); // сделать под словари
+=======
             
             if (gameObject.GetComponent("Marker_good")) OnCollected?.Invoke(_bonus_types[Random.Range(0,_bonus_types.Count)],_goodMultiplier);
             if (gameObject.GetComponent("Marker_bad")) OnCollected?.Invoke(_bonus_types[Random.Range(0, _bonus_types.Count)], _badMultiplier);
                
+>>>>>>> Dev_work
 
            Dispose(gameObject);
         }
