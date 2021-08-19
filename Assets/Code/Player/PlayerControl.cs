@@ -26,7 +26,7 @@ public class PlayerControl : MonoBehaviour, IDisposable
     public float shakeDuration = .8f;
     private Quaternion _originalRotation;
         //
-        protected Bonuses[] _bonuses;
+    protected Bonuses[] _bonuses;
     void Start()
     {
         _speedOriginal = MoveSpeed;

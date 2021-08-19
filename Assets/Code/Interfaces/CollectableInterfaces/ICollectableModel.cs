@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ICollectableModel : MonoBehaviour
+public interface ICollectableModel 
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    float X { get; }
+    float Y { get; }
+    float Z { get; }
+    Color Color { get; set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
