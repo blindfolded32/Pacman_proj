@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ICollectableController : MonoBehaviour
+public interface ICollectableController 
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    float PullCount { get; set; }
+    delegate void ScorePill();
+    event ScorePill CollectPill;
+    void OnCollect();
 }
