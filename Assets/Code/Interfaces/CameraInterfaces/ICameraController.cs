@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IPlayerController 
+public interface ICameraController 
 {
-    void OnUpdate();
+    void Shake(float duration);
 }
