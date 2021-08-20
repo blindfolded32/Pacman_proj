@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PillController : ICollectableController
 {
-    public float PullCount { get; set; }
+    public float PillCount { get; private set; }
     private readonly ICollectableModel _collectableModel;
     private readonly ICollectableView _collectableView;
 
@@ -18,6 +18,10 @@ public class PillController : ICollectableController
 
     public void OnCollect()
     {
-        if (_collectableView.collected) CollectPill?.Invoke();
+        if (_collectableView.collected)
+        {
+            PillCount--;
+            CollectPill?.Invoke(PillCount);
+        }
     }
 }
