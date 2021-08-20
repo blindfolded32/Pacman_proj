@@ -5,6 +5,6 @@ using UnityEngine;
 public interface ICollectableView 
 {
     Animator animator { get; }
-
+    bool collected { get; }
     void BonusColored();
 }
