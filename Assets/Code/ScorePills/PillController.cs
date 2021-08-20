@@ -1,15 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class PillController : ICollectableController
 {
-    public float PullCount { get; set; }
+    public float PillCount { get; private set; }
+    private readonly ICollectableModel _collectableModel;
+    private readonly ICollectableView _collectableView;
 
     public event ICollectableController.ScorePill CollectPill;
 
+    public PillController(ICollectableModel pillModel, ICollectableView pillView)
+    {
+        _collectableModel = pillModel;
+        _collectableView = pillView;
+        
+    }
+
     public void OnCollect()
     {
-        throw new System.NotImplementedException();
+        if (_collectableView.collected)
+        {
+            PillCount--;
+            CollectPill?.Invoke(PillCount);
+        }
     }
 }
