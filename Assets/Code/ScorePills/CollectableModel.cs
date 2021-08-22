@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public struct PillModel : ICollectableModel
+public struct CollectableModel : ICollectableModel
 {
     public Color Color { get; set; }
 
@@ -12,6 +12,6 @@ public struct PillModel : ICollectableModel
 
     public float Z { get; }
 
-    public PillModel(Color color) : this() => Color = color;
+    public CollectableModel(Color color) : this() => Color = color;
    
 }
