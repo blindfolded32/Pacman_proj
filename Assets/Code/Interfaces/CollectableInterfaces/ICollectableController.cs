@@ -4,8 +4,9 @@ using UnityEngine;
 
 public interface ICollectableController 
 {
-    float PillCount { get; }
-    delegate void ScorePill(float pillsLeft);
+   
+    bool gameEnd { get; }
+    delegate void ScorePill();
     event ScorePill CollectPill;
-    void OnCollect();
+    bool OnCollect();
 }
