@@ -1,6 +1,7 @@
 public interface IBonusView 
 {
-    bool collected { get; }
 
-    void OnCollected();
+    delegate void GotBonus(bool status);
+    event GotBonus bonusPickedUp;
+
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public interface ICollectableController 
 {
-   
     bool gameEnd { get; }
     delegate void ScorePill();
     event ScorePill CollectPill;

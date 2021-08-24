@@ -19,7 +19,6 @@ public class PlayerController : IPlayerController
     {
         _playerView.MoveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         _playerView.MoveDirection = _playerView.Transform.TransformDirection(_playerView.MoveDirection);
-       // Debug.Log($"Moving to {_playerView.MoveDirection}");
         _playerView.MoveDirection *= _playerModel.Speed;
         _playerView.MovementControl.Move(_playerView.MoveDirection * Time.deltaTime);
         _playerView.Transform.Rotate(0, Input.GetAxis("Horizontal"), 0);

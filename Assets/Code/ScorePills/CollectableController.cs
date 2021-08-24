@@ -1,17 +1,13 @@
 using static UnityEngine.Object;
-using System.Collections.Generic;
-using UnityEngine;
 
 public class CollectableController : ICollectableController
 {
-    
-
     public bool gameEnd  { get; private set; }
+    private float _count;
 
     private readonly ICollectableModel _collectableModel;
     private ICollectableView _collectableView;
     public event ICollectableController.ScorePill CollectPill;
-    private float _count;
 
    public CollectableController(ICollectableModel pillModel)
     {
@@ -20,21 +16,18 @@ public class CollectableController : ICollectableController
         {
         _collectableModel = pillModel;
         _collectableView = pill;
-            pill.eatPill += (x) => Eated(x);
+        pill.eatPill += (x) => Eated(x);
         }
         _count = pills.Length;
     }
    
-   public bool Eated(bool status)
+   public void Eated(bool status)
     {
        if (status)
         {
-
-            Debug.Log(_count);
             _count--;
-            if (_count < 200)  return gameEnd = true;
+            if (_count < 200)  gameEnd = true;
         }
-        return false;
     }
     public bool OnCollect() => gameEnd;
     
