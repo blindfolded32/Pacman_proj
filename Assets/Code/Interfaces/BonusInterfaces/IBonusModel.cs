@@ -8,5 +8,5 @@ public interface IBonusModel
     float Y { get; }
     float Z { get; }
     Color color { get; }
-    PrimitiveType type { get; }
+   // PrimitiveType type { get; }
 }
