@@ -31,7 +31,7 @@ public class BonusController : IBonusController
     public void OnCollect()
     {
         int chosenDesteny = Range(0, (_bonusDict.Count - 1)); // переделать на нахождение макс ключа в словаре
-        GetBonus(chosenDesteny);
+        GetBonus(0);//chosenDesteny);
     }
 
     private void GetBonus(int id)

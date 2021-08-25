@@ -10,17 +10,16 @@ public class CameraController : ICameraController
     private float nextActionTime = 0.0f;
     public float period = 0.0025f;
 
-    public  IBonusView bonusPickUp;
-
-    public CameraController(ICameraView cameraView, ICameraModel cameraModel)
+    public CameraController(ICameraView cameraView, ICameraModel cameraModel, IBonusController bonusController)
     {
         _cameraView = cameraView;
         _cameraModel = cameraModel;
-        bonusPickUp = new BonusView();
-        bonusPickUp.bonusPickedUp += () => Shake(1.0f);
-       
+        
+        bonusController.SpeedCollect += (x) => Shake();
+
     }
 
+    public void Shake()    { Shake(1.0f); }
     public void Shake(float duration)
     {
         Quaternion _originalRotation = _cameraView.Camera.transform.localRotation;
