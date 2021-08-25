@@ -1,7 +1,7 @@
 public interface IBonusView 
 {
 
-    delegate void GotBonus(bool status);
+    delegate void GotBonus();
     event GotBonus bonusPickedUp;
 
 }

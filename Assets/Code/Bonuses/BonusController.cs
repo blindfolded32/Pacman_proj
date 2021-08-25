@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using static UnityEngine.Object;
 using static UnityEngine.Random;
+using UnityEngine;
 
 
 public class BonusController : IBonusController
@@ -21,14 +22,15 @@ public class BonusController : IBonusController
         {
             _bonusModel = bonusModel;
             _bonusView = bonus;
-            bonus.bonusPickedUp += (x) => OnCollect();
+            bonus.bonusPickedUp += () => OnCollect();
         }
     }
 
     public void OnCollect()
     {
+        //throw new KeyNotFoundException("AAAAAAA");
         int chosenDesteny = Range(0, (_bonusDict.Count - 1)); // переделать на нахождение макс ключа в словаре
-        GetBonus(chosenDesteny);
+        GetBonus(0);//chosenDesteny);
     }
 
     private void GetBonus(int id)
@@ -36,7 +38,7 @@ public class BonusController : IBonusController
         switch (id)
             {
 
-            case 0: SpeedCollect?.Invoke(true); break;
+            case 0: Debug.Log("Speed"); SpeedCollect?.Invoke(true); break;
             case 1: ScoreCollect?.Invoke(true); break;
             case 2: GodModeCollect?.Invoke(true); break;
             default: break;
