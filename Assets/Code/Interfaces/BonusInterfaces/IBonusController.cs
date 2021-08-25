@@ -9,4 +9,5 @@ public interface IBonusController
     event BonusCollected SpeedCollect;
     event BonusCollected GodModeCollect;
     void OnCollect();
+    void OnInit();
 }

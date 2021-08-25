@@ -10,19 +10,24 @@ public class CameraController : ICameraController
     private float nextActionTime = 0.0f;
     public float period = 0.0025f;
 
+    public  IBonusView bonusPickUp;
+
     public CameraController(ICameraView cameraView, ICameraModel cameraModel)
     {
         _cameraView = cameraView;
         _cameraModel = cameraModel;
+        bonusPickUp = new BonusView();
+        bonusPickUp.bonusPickedUp += () => Shake(1.0f);
+       
     }
 
     public void Shake(float duration)
     {
-        Quaternion _originalRotation = _cameraModel.Rotation;
-       // ShakigCamera(duration);
-
+        Quaternion _originalRotation = _cameraView.Camera.transform.localRotation;
+        // ShakigCamera(duration);
+        Debug.Log("Shake IT");
         //****
-        float StartTime = Time.time;
+      /*  float StartTime = Time.time;
         while (StartTime + duration > Time.time)
         {
 
@@ -32,8 +37,10 @@ public class CameraController : ICameraController
             _cameraView.Camera.transform.localRotation = new Quaternion(_cameraView.Camera.transform.localRotation.x, Random.Range(-0.02f, 0.02f), Random.Range(-0.02f, 0.02f), 1.0f);
         }
         }
-        _cameraView.Camera.transform.localRotation = _originalRotation;
+        _cameraView.Camera.transform.localRotation = _originalRotation;*/
     }
+
+
 
     IEnumerator ShakigCamera(float duration)
     {
@@ -47,5 +54,10 @@ public class CameraController : ICameraController
 
         }
 
+    }
+
+    public void OnInit()
+    {
+       
     }
 }

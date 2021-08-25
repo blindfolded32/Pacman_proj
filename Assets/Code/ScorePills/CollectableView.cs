@@ -9,9 +9,6 @@ public class CollectableView : MonoBehaviour, ICollectableView, IDisposable
 
     public event ICollectableView.ScorePill eatPill;
 
-    public bool collected { get; set; }
-  
-
     private void Awake()
     {
         if (!TryGetComponent<Animator>(out _animator)) throw new ArgumentNullException($"{gameObject.name} has no Animator");

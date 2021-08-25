@@ -8,4 +8,5 @@ public interface ICollectableController
     delegate void ScorePill();
     event ScorePill CollectPill;
     bool OnCollect();
+
 }

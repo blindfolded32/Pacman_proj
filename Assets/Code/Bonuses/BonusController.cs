@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using static UnityEngine.Object;
 using static UnityEngine.Random;
+using UnityEngine;
 
 
 public class BonusController : IBonusController
@@ -21,9 +22,11 @@ public class BonusController : IBonusController
         {
             _bonusModel = bonusModel;
             _bonusView = bonus;
-            bonus.bonusPickedUp += (x) => OnCollect();
+            bonus.bonusPickedUp += () => { OnCollect(); Debug.Log($"{bonus.name} invoked"); };
         }
     }
+
+    public BonusController() { }
 
     public void OnCollect()
     {
@@ -42,5 +45,10 @@ public class BonusController : IBonusController
             default: break;
 
             }
+    }
+
+    public void OnInit()
+    {
+      
     }
 }
