@@ -1,4 +1,5 @@
 using static UnityEngine.Object;
+using UnityEngine;
 
 public class CollectableController : ICollectableController
 {
@@ -21,10 +22,11 @@ public class CollectableController : ICollectableController
         _count = pills.Length;
     }
    
-   public void Eated(bool status)
+   private void Eated(bool status)
     {
        if (status)
         {
+            Debug.Log("hrum-hrum");
             _count--;
             if (_count < 200)  gameEnd = true;
         }

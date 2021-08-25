@@ -9,8 +9,10 @@ public class GameStarter : MonoBehaviour
     [SerializeField] private Canvas _victoryUI;
     private IPlayerController _playerController;
     private ICollectableController _collectableController;
+
     private ICameraController _cameraController;
     private IBonusController _bonusController;
+
   
 
     private void Start()
@@ -18,6 +20,7 @@ public class GameStarter : MonoBehaviour
        _playerController = new PlayerController(FindObjectOfType<PlayerView>(), new PlayerModel(_speed));
        _collectableController = new CollectableController(new CollectableModel());
         _bonusController = new BonusController(new BonusModel());
+
        _cameraController = new CameraController(FindObjectOfType<CameraView>(), new CameraModel(), _bonusController);
 
     }
@@ -25,6 +28,7 @@ public class GameStarter : MonoBehaviour
     private void Update()
     {
         _playerController.OnUpdate();
+
         if (_collectableController.OnCollect()) _victoryUI.gameObject.SetActive(true);
         if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("MainScene");
       

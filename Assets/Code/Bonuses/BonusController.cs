@@ -22,7 +22,9 @@ public class BonusController : IBonusController
         {
             _bonusModel = bonusModel;
             _bonusView = bonus;
-            bonus.bonusPickedUp += () => { OnCollect(); Debug.Log($"{bonus.name} invoked"); };
+
+            bonus.bonusPickedUp += () => OnCollect();
+
         }
     }
 
@@ -30,7 +32,8 @@ public class BonusController : IBonusController
 
     public void OnCollect()
     {
-        int chosenDesteny = Range(0, (_bonusDict.Count - 1)); // переделать на нахождение макс ключа в словаре
+        //throw new KeyNotFoundException("AAAAAAA");
+        int chosenDesteny = Range(0, (_bonusDict.Count - 1)); // ГЇГҐГ°ГҐГ¤ГҐГ«Г ГІГј Г­Г  Г­Г ГµГ®Г¦Г¤ГҐГ­ГЁГҐ Г¬Г ГЄГ± ГЄГ«ГѕГ·Г  Гў Г±Г«Г®ГўГ Г°ГҐ
         GetBonus(0);//chosenDesteny);
     }
 
@@ -39,7 +42,7 @@ public class BonusController : IBonusController
         switch (id)
             {
 
-            case 0: SpeedCollect?.Invoke(true); break;
+            case 0: Debug.Log("Speed"); SpeedCollect?.Invoke(true); break;
             case 1: ScoreCollect?.Invoke(true); break;
             case 2: GodModeCollect?.Invoke(true); break;
             default: break;

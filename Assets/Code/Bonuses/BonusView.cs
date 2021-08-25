@@ -11,9 +11,10 @@ public class BonusView : MonoBehaviour, IBonusView, IDisposable
     {
         if (other.GetComponent<PlayerView>())
         {
-            Debug.Log("in BonusView");
+
             bonusPickedUp?.Invoke();
             Dispose(gameObject);
+            Debug.Log("eat");
         }
 
     }
