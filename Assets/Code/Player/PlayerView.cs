@@ -18,4 +18,6 @@ public class PlayerView : MonoBehaviour, IPlayerView
     {
         
     }
+
+    public void ChildCourutine(IEnumerator enumerator) => StartCoroutine(enumerator);
 }
