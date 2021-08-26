@@ -9,7 +9,7 @@ public class GameStarter : MonoBehaviour
     [SerializeField] private Canvas _victoryUI;
     private IPlayerController _playerController;
     private ICollectableController _collectableController;
-
+    private IEnemyController _enemyController;
     private ICameraController _cameraController;
     private IBonusController _bonusController;
 
@@ -17,10 +17,10 @@ public class GameStarter : MonoBehaviour
 
     private void Start()
     {
-       _playerController = new PlayerController(FindObjectOfType<PlayerView>(), new PlayerModel(_speed));
-       _collectableController = new CollectableController(new CollectableModel());
         _bonusController = new BonusController(new BonusModel());
-
+       _playerController = new PlayerController(FindObjectOfType<PlayerView>(), new PlayerModel(_speed), _bonusController);
+       _collectableController = new CollectableController(new CollectableModel());
+        _enemyController = new EnemyController(new EnemyModel(_speed), _bonusController);
        _cameraController = new CameraController(FindObjectOfType<CameraView>(), new CameraModel(), _bonusController);
 
     }

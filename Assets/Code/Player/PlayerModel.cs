@@ -10,11 +10,9 @@ public struct PlayerModel : IPlayerModel
 
     public float Z { get; }
 
-    public float Speed { get; }
+    public float Speed { get; set; }
 
-    public float Score { get; }
-
-    public bool _isPlayerInvulnerable { get; }
+    public bool _isPlayerInvulnerable { get; set; }
 
     public PlayerModel(float speed) : this() => Speed = speed;
 }

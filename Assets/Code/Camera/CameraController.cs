@@ -18,37 +18,21 @@ public class CameraController : ICameraController
     {
         _cameraView = cameraView;
         _cameraModel = cameraModel;
-
-        
-        bonusController.SpeedCollect += (x) => Shake();
+        bonusController.SpeedCollect += (x) => Shake(_duration);
     }
 
-    public void Shake()    { Shake(1.0f); }
+  
     public void Shake(float duration)
     {
-
         Debug.Log("Shake it");
         Quaternion _originalRotation = _cameraView.Camera.transform.localRotation;
-        //ShakigCamera(duration);
-
-        //****
-        float StartTime = Time.time;
-            Debug.Log($"time left {StartTime + duration} and { Time.time}");
-        while (StartTime + duration < Time.time)
-
-        {
-        if (Time.time > nextActionTime)
-        {
-            nextActionTime += period;
-            _cameraView.Camera.transform.localRotation = new Quaternion(_cameraView.Camera.transform.localRotation.x, UnityEngine.Random.Range(-0.02f, 0.02f), UnityEngine.Random.Range(-0.02f, 0.02f), 1.0f);
-        }
-        }
-        _cameraView.Camera.transform.localRotation = _originalRotation;*/
+        _cameraView.ChildCourutine(ShakingCamera(duration));
+        _cameraView.Camera.transform.localRotation = _originalRotation;
     }
 
 
 
-    IEnumerator ShakigCamera(float duration)
+    IEnumerator ShakingCamera(float duration)
     {
 
         float timeLeft = Time.time;

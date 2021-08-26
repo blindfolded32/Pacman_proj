@@ -6,5 +6,6 @@ public interface ICameraView
 {
     Camera Camera { get; }
 
+    void ChildCourutine(IEnumerator enumerator);
    
 }

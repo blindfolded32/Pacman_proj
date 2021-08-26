@@ -9,4 +9,6 @@ public interface IPlayerView
     CharacterController MovementControl { get; set; }
     void Movement();
 
+    void ChildCourutine(IEnumerator enumerator);
+
 }
