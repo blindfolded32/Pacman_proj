@@ -35,13 +35,14 @@ public class BonusController : IBonusController
 
     public void OnCollect()
     {
-        //throw new KeyNotFoundException("AAAAAAA");
+       
         int chosenDesteny = Range(0, (_bonusDict.Count - 1)); // ïåðåäåëàòü íà íàõîæäåíèå ìàêñ êëþ÷à â ñëîâàðå
         GetBonus(0,_goodMultiplier);//chosenDesteny);
     }
 
     private void GetBonus(int id, float multiplier)
     {
+    
         switch (id)
             {
 
