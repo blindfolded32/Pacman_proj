@@ -20,7 +20,7 @@ namespace Geekbrains
 
             var component = GetComponent<Camera>();
             component.targetTexture = rt;
-            component.depth = --main.depth;
+            component.depth = -5;
         }
 
         private void LateUpdate()
@@ -76,7 +76,7 @@ namespace Geekbrains
 
             var component = _owner.GetComponent<Camera>();
             component.targetTexture = rt;
-            component.depth = --main.depth;
+            component.depth = -5;
         }
     }
 

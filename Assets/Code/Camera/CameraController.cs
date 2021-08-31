@@ -11,17 +11,20 @@ public class CameraController : ICameraController
 
     private float nextActionTime = 0.0f;
     public float period = 0.0025f;
- //   public event IBonusView.GotBonus _bonusCollect;
+
     [SerializeField] private float _duration = 0.85f;
+
+
 
     public CameraController(ICameraView cameraView, ICameraModel cameraModel, IBonusController bonusController)
     {
         _cameraView = cameraView;
         _cameraModel = cameraModel;
         bonusController.SpeedCollect += (x) => Shake(_duration);
-    }
 
-  
+    }
+   
+
     public void Shake(float duration)
     {
         Debug.Log("Shake it");
@@ -34,9 +37,7 @@ public class CameraController : ICameraController
 
     IEnumerator ShakingCamera(float duration)
     {
-
         float timeLeft = Time.time;
-
         while ((timeLeft + duration) > Time.time)
         {
             Debug.Log("Shake");
@@ -44,7 +45,6 @@ public class CameraController : ICameraController
             yield return new WaitForSeconds(0.025f);
 
         }
-
     }
 
     public void OnInit()
