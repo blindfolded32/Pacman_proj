@@ -9,12 +9,13 @@ public class BonusController : IBonusController
     public event IBonusController.BonusCollected ScoreCollect;
     public event IBonusController.BonusCollected SpeedCollect;
     public event IBonusController.BonusCollected GodModeCollect;
-
     private readonly IBonusModel _bonusModel;
     private readonly IBonusView _bonusView;
 
     private float _goodMultiplier = 2.0f;
     private float _badMultiplier = 0.5f;
+
+    
 
     private Dictionary <int, string> _bonusDict = new Dictionary<int, string> { { 0, "Move" },{1, "Score" },{2, "GodMode"} }; 
 
@@ -25,7 +26,7 @@ public class BonusController : IBonusController
         {
             _bonusModel = bonusModel;
             _bonusView = bonus;
-
+          
             bonus.bonusPickedUp += () => OnCollect();
 
         }
@@ -49,7 +50,7 @@ public class BonusController : IBonusController
             case 0: Debug.Log("Speed"); SpeedCollect?.Invoke(multiplier); break;
             case 1: ScoreCollect?.Invoke(true); break;
             case 2: GodModeCollect?.Invoke(true); break;
-            default: break;
+
 
             }
     }
@@ -58,4 +59,6 @@ public class BonusController : IBonusController
     {
       
     }
+
+   
 }

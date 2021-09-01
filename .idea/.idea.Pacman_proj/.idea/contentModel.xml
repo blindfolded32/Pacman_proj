@@ -9,7 +9,6 @@
         <e p="Code" t="Include">
           <e p="Bonuses" t="Include">
             <e p="BonusController.cs" t="Include" />
-            <e p="Bonuses.cs" t="Include" />
             <e p="BonusModel.cs" t="Include" />
             <e p="BonusView.cs" t="Include" />
             <e p="Markers" t="Include">
@@ -23,7 +22,6 @@
             <e p="CameraView.cs" t="Include" />
           </e>
           <e p="Enemies" t="Include">
-            <e p="EnemyControl.cs" t="Include" />
             <e p="EnemyController.cs" t="Include" />
             <e p="EnemyModel.cs" t="Include" />
             <e p="EnemyView.cs" t="Include" />
@@ -31,6 +29,7 @@
           <e p="GameStarter.cs" t="Include" />
           <e p="hw7.cs" t="Include" />
           <e p="Interfaces" t="Include">
+            <e p="BonusEventTransfer.cs" t="Include" />
             <e p="BonusInterfaces" t="Include">
               <e p="IBonusController.cs" t="Include" />
               <e p="IBonusModel.cs" t="Include" />
@@ -51,8 +50,12 @@
               <e p="IEnemyModel.cs" t="Include" />
               <e p="IEnemyView.cs" t="Include" />
             </e>
-            <e p="IBonusCollected.cs" t="Include" />
             <e p="IDisposable.cs" t="Include" />
+            <e p="MiniMapInterfaces" t="Include">
+              <e p="IMiniMapController.cs" t="Include" />
+              <e p="IMinimapModel.cs" t="Include" />
+              <e p="IMinimapView.cs" t="Include" />
+            </e>
             <e p="PlayerInterfaces" t="Include">
               <e p="IPlayerController.cs" t="Include" />
               <e p="IPlayerModel.cs" t="Include" />
@@ -61,7 +64,6 @@
           </e>
           <e p="Player" t="Include">
             <e p="PlayerBonusCollecting.cs" t="Include" />
-            <e p="PlayerControl.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="PlayerModel.cs" t="Include" />
             <e p="PlayerView.cs" t="Include" />
@@ -70,6 +72,11 @@
             <e p="CollectableController.cs" t="Include" />
             <e p="CollectableModel.cs" t="Include" />
             <e p="CollectableView.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="MiniMapController.cs" t="Include" />
+            <e p="MiniMapModel.cs" t="Include" />
+            <e p="MiniMapView.cs" t="Include" />
           </e>
         </e>
       </e>

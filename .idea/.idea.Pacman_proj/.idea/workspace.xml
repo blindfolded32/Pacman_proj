@@ -10,11 +10,38 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Code/UI/MiniMapView.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Code/Bonuses/BonusController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/hw7.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/PlayerInterfaces/IPlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/CameraInterfaces/ICameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IBonusEventTransfer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/MiniMap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/MiniMapInterfaces/IMinimapModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/MiniMapInterfaces/IMinimapView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/MiniMapInterfaces/IMiniMapController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/MiniMapController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/MiniMapModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/MiniMapView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Bonuses/BonusController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Bonuses/BonusView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Bonuses/Bonuses.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemies/EnemyControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Bonuses/Markers/Marker_bad.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Bonuses/Markers/Marker_good.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Camera/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Camera/CameraModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Camera/CameraView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemies/EnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemies/EnemyModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemies/EnemyView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameStarter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/BonusEventTransfer.cs" />
       </list>
     </option>
   </component>
@@ -59,6 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1630049941913</updated>
       <workItem from="1630050069886" duration="9032000" />
+      <workItem from="1630478770639" duration="11319000" />
     </task>
     <servers />
   </component>
@@ -72,6 +100,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040@0.0.1920.1040" timestamp="1630062858768" />
+    <state x="788" y="205" key="RiderGenerateDialog" timestamp="1630494914858">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="788" y="205" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1630494914858" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1630050573631">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
