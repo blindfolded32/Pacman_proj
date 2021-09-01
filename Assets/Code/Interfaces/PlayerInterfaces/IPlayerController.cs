@@ -5,4 +5,6 @@ using UnityEngine;
 public interface IPlayerController 
 {
     void OnUpdate();
+
+    void SpeedModify(float multi);
 }

@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -8,29 +6,23 @@ public class CameraController : ICameraController
 {
     private readonly ICameraView _cameraView;
     private ICameraModel _cameraModel;
-
-    private float nextActionTime = 0.0f;
-    public float period = 0.0025f;
-
-    [SerializeField] private float _duration = 0.85f;
+    private float _duration = 0.85f;
 
 
-
-    public CameraController(ICameraView cameraView, ICameraModel cameraModel, IBonusController bonusController)
+    public CameraController(ICameraView cameraView, ICameraModel cameraModel)
     {
         _cameraView = cameraView;
         _cameraModel = cameraModel;
-        bonusController.SpeedCollect += (x) => Shake(_duration);
+   }
 
-    }
-   
+    public void Shake() => Shake(_duration);
 
-    public void Shake(float duration)
+    private void Shake(float duration)
     {
         Debug.Log("Shake it");
-        Quaternion _originalRotation = _cameraView.Camera.transform.localRotation;
+        Quaternion originalRotation = _cameraView.Camera.transform.localRotation;
         _cameraView.ChildCourutine(ShakingCamera(duration));
-        _cameraView.Camera.transform.localRotation = _originalRotation;
+        _cameraView.Camera.transform.localRotation = originalRotation;
     }
 
 
@@ -51,4 +43,6 @@ public class CameraController : ICameraController
     {
        
     }
+
+ 
 }

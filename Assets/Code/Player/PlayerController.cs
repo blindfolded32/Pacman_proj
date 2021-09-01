@@ -11,14 +11,14 @@ public class PlayerController : IPlayerController
     {
         _playerView = playerView;
         _playerModel = playerModel;
-        bonusController.SpeedCollect += (x) => BoostSpeed((float)x);
+     //   bonusController.SpeedCollect += (x) => BoostSpeed((float)x);
     }
     public void OnUpdate()
     {
         Move();
     }
 
-    private void BoostSpeed(float multiplier) 
+    public void SpeedModify(float multiplier) 
     {
         float _originSpeed = _playerModel.Speed;
         _playerModel.Speed *= multiplier;
