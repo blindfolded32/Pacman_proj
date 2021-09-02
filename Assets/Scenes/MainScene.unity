@@ -2692,7 +2692,6 @@ GameObject:
   - component: {fileID: 126881911}
   - component: {fileID: 126881910}
   - component: {fileID: 126881912}
-  - component: {fileID: 126881913}
   - component: {fileID: 126881909}
   m_Layer: 0
   m_Name: Player
@@ -2776,22 +2775,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.26890856
   m_Center: {x: 0.00063732266, y: -0.005480826, z: 0.0065820217}
---- !u!114 &126881913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126881907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d911dbd274f93149afe8280cee72b77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 2
-  _victoryUI: {fileID: 168145397}
-  _texture: {fileID: 8400000, guid: 7951b9dfda1c0ef4dab5a6c0d665fc43, type: 2}
-  _miniMapCamera: {fileID: 830879611}
 --- !u!1 &133528683
 GameObject:
   m_ObjectHideFlags: 0
@@ -27928,6 +27911,53 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1596279402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1596279404}
+  - component: {fileID: 1596279403}
+  m_Layer: 0
+  m_Name: Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1596279403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596279402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d911dbd274f93149afe8280cee72b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 2
+  _victoryUI: {fileID: 168145397}
+  _texture: {fileID: 8400000, guid: 7951b9dfda1c0ef4dab5a6c0d665fc43, type: 2}
+  _miniMapCamera: {fileID: 830879611}
+--- !u!4 &1596279404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596279402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.08486247, y: -8.614352, z: 4.932502}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1614492980
 GameObject:
   m_ObjectHideFlags: 0

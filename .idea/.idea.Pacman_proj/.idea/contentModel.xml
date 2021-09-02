@@ -68,6 +68,17 @@
             <e p="PlayerModel.cs" t="Include" />
             <e p="PlayerView.cs" t="Include" />
           </e>
+          <e p="SaveLoad" t="Include">
+            <e p="BonusPrefs.cs" t="Include" />
+            <e p="Interface" t="Include">
+              <e p="IActionInterface.cs" t="Include" />
+              <e p="ISaveData.cs" t="Include" />
+            </e>
+            <e p="JsonActions.cs" t="Include" />
+            <e p="RepositorySave.cs" t="Include" />
+            <e p="SaveController.cs" t="Include" />
+            <e p="SavedData.cs" t="Include" />
+          </e>
           <e p="ScorePills" t="Include">
             <e p="CollectableController.cs" t="Include" />
             <e p="CollectableModel.cs" t="Include" />
@@ -78,6 +89,9 @@
             <e p="MiniMapModel.cs" t="Include" />
             <e p="MiniMapView.cs" t="Include" />
           </e>
+        </e>
+        <e p="dataSave" t="Include">
+          <e p="data.txt" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

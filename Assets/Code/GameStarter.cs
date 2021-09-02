@@ -1,4 +1,5 @@
 using System;
+using Code.SaveLoad;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +16,7 @@ public class GameStarter : MonoBehaviour
     private IBonusController _bonusController;
     private IMiniMapController _miniMapController;
     private BonusEventTransfer _bonusEvent;
+    private SaveController _saveController;
     private void Start()
     {
        _bonusController = new BonusController(new BonusModel());
@@ -24,6 +26,7 @@ public class GameStarter : MonoBehaviour
        _enemyController = new EnemyController(new EnemyModel(_speed), _bonusController);
        _bonusEvent = new BonusEventTransfer(_bonusController,_playerController,_cameraController,_enemyController);
        _miniMapController = new MiniMapController(FindObjectOfType<MiniMapView>().transform,FindObjectOfType<PlayerView>().transform,new MiniMapModel(_texture,_miniMapCamera), FindObjectOfType<MiniMapView>() );
+       _saveController = new SaveController(_bonusController);
     }
    
     private void Update()
@@ -32,6 +35,7 @@ public class GameStarter : MonoBehaviour
        
         if (_collectableController.OnCollect()) _victoryUI.gameObject.SetActive(true);
         if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("MainScene");
+        if (Input.GetKeyDown(KeyCode.Z)) _saveController.Save();
       
     }
 

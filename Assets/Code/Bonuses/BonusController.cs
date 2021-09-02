@@ -15,7 +15,7 @@ public class BonusController : IBonusController
     private float _goodMultiplier = 2.0f;
     private float _badMultiplier = 0.5f;
 
-    
+    public Vector3 SpawnPosition { get; set; }
 
     private Dictionary <int, string> _bonusDict = new Dictionary<int, string> { { 0, "Move" },{1, "Score" },{2, "GodMode"} }; 
 
@@ -26,14 +26,11 @@ public class BonusController : IBonusController
         {
             _bonusModel = bonusModel;
             _bonusView = bonus;
-          
             bonus.bonusPickedUp += () => OnCollect();
-
+            SpawnPosition = new Vector3(_bonusModel.X, _bonusModel.Y, _bonusModel.Z);
+            Debug.Log($"{SpawnPosition} of bonus");
         }
     }
-
-    public BonusController() { }
-
     public void OnCollect()
     {
        
@@ -43,22 +40,12 @@ public class BonusController : IBonusController
 
     private void GetBonus(int id, float multiplier)
     {
-    
         switch (id)
             {
-
             case 0: Debug.Log("Speed"); SpeedCollect?.Invoke(multiplier); break;
             case 1: ScoreCollect?.Invoke(true); break;
             case 2: GodModeCollect?.Invoke(true); break;
-
-
             }
     }
 
-    public void OnInit()
-    {
-      
-    }
-
-   
 }

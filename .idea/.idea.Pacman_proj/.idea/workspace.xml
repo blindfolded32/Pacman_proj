@@ -28,7 +28,6 @@
         <option value="$PROJECT_DIR$/Assets/Code/UI/MiniMapController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/MiniMapModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/MiniMapView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Bonuses/BonusController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Bonuses/BonusView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Bonuses/Bonuses.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Enemies/EnemyControl.cs" />
@@ -40,8 +39,17 @@
         <option value="$PROJECT_DIR$/Assets/Code/Enemies/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Enemies/EnemyModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Enemies/EnemyView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameStarter.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Interfaces/BonusEventTransfer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/SaveLoad/Interface/ISaveData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/SaveLoad/BonusPrefs.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/SaveLoad/SavedData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/SaveLoad/Interface/IActionInterface.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameStarter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/SaveLoad/JsonActions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/BonusInterfaces/IBonusController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Bonuses/BonusController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/SaveLoad/RepositorySave.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/SaveLoad/SaveController.cs" />
       </list>
     </option>
   </component>
@@ -87,6 +95,7 @@
       <updated>1630049941913</updated>
       <workItem from="1630050069886" duration="9032000" />
       <workItem from="1630478770639" duration="11319000" />
+      <workItem from="1630566596549" duration="7442000" />
     </task>
     <servers />
   </component>
@@ -100,10 +109,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040@0.0.1920.1040" timestamp="1630062858768" />
-    <state x="788" y="205" key="RiderGenerateDialog" timestamp="1630494914858">
+    <state x="788" y="205" key="RiderGenerateDialog" timestamp="1630570019490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="788" y="205" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1630494914858" />
+    <state x="788" y="205" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1630570019490" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1630050573631">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
