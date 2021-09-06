@@ -9,5 +9,5 @@ public interface IBonusController
     event BonusCollected SpeedCollect;
     event BonusCollected GodModeCollect;
     void OnCollect();
-    void OnInit();
+    Vector3 SpawnPosition { get; set; }
 }

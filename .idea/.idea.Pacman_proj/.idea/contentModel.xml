@@ -40,6 +40,7 @@
               <e p="ICameraModel.cs" t="Include" />
               <e p="ICameraView.cs" t="Include" />
             </e>
+            <e p="ColectableScore.cs" t="Include" />
             <e p="CollectableInterfaces" t="Include">
               <e p="ICollectableController.cs" t="Include" />
               <e p="ICollectableModel.cs" t="Include" />
@@ -51,6 +52,7 @@
               <e p="IEnemyView.cs" t="Include" />
             </e>
             <e p="IDisposable.cs" t="Include" />
+            <e p="IScore.cs" t="Include" />
             <e p="MiniMapInterfaces" t="Include">
               <e p="IMiniMapController.cs" t="Include" />
               <e p="IMinimapModel.cs" t="Include" />
@@ -68,16 +70,33 @@
             <e p="PlayerModel.cs" t="Include" />
             <e p="PlayerView.cs" t="Include" />
           </e>
+          <e p="SaveLoad" t="Include">
+            <e p="BonusPrefs.cs" t="Include" />
+            <e p="Interface" t="Include">
+              <e p="IActionInterface.cs" t="Include" />
+              <e p="ISaveData.cs" t="Include" />
+            </e>
+            <e p="JsonActions.cs" t="Include" />
+            <e p="RepositorySave.cs" t="Include" />
+            <e p="SaveController.cs" t="Include" />
+            <e p="SavedData.cs" t="Include" />
+          </e>
           <e p="ScorePills" t="Include">
             <e p="CollectableController.cs" t="Include" />
             <e p="CollectableModel.cs" t="Include" />
             <e p="CollectableView.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
-            <e p="MiniMapController.cs" t="Include" />
-            <e p="MiniMapModel.cs" t="Include" />
-            <e p="MiniMapView.cs" t="Include" />
+            <e p="MiniMap" t="Include">
+              <e p="MiniMapController.cs" t="Include" />
+              <e p="MiniMapModel.cs" t="Include" />
+              <e p="MiniMapView.cs" t="Include" />
+            </e>
+            <e p="ScoreController.cs" t="Include" />
           </e>
+        </e>
+        <e p="dataSave" t="Include">
+          <e p="data.txt" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

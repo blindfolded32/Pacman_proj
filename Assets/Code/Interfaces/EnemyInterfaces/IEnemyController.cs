@@ -4,6 +4,6 @@ using UnityEngine.AI;
 
 public interface IEnemyController 
 {
-    NavMeshAgent NavMeshAgent {get; }
+    bool IsFleeing { get; }
     void OnUpdate();
 }
