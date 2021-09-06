@@ -40,6 +40,7 @@
               <e p="ICameraModel.cs" t="Include" />
               <e p="ICameraView.cs" t="Include" />
             </e>
+            <e p="ColectableScore.cs" t="Include" />
             <e p="CollectableInterfaces" t="Include">
               <e p="ICollectableController.cs" t="Include" />
               <e p="ICollectableModel.cs" t="Include" />
@@ -51,6 +52,7 @@
               <e p="IEnemyView.cs" t="Include" />
             </e>
             <e p="IDisposable.cs" t="Include" />
+            <e p="IScore.cs" t="Include" />
             <e p="MiniMapInterfaces" t="Include">
               <e p="IMiniMapController.cs" t="Include" />
               <e p="IMinimapModel.cs" t="Include" />
@@ -85,9 +87,12 @@
             <e p="CollectableView.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
-            <e p="MiniMapController.cs" t="Include" />
-            <e p="MiniMapModel.cs" t="Include" />
-            <e p="MiniMapView.cs" t="Include" />
+            <e p="MiniMap" t="Include">
+              <e p="MiniMapController.cs" t="Include" />
+              <e p="MiniMapModel.cs" t="Include" />
+              <e p="MiniMapView.cs" t="Include" />
+            </e>
+            <e p="ScoreController.cs" t="Include" />
           </e>
         </e>
         <e p="dataSave" t="Include">
