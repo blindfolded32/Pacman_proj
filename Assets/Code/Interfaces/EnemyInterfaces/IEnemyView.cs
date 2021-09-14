@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 
 public interface IEnemyView 
@@ -9,6 +10,7 @@ public interface IEnemyView
 
     delegate void EnemyKilled();
     event EnemyKilled OnKill;
-    bool IsFleeing { get; set; }
-    void ChildCourutine(IEnumerator enumerator);
+   void ChildCourutine(IEnumerator enumerator);
+    void MoveEnemy();
+    NavMeshAgent _navMeshAgent { get; set; }
 }

@@ -10,9 +10,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Code/UI/MiniMapView.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -28,7 +25,6 @@
         <option value="$PROJECT_DIR$/Assets/Code/UI/MiniMapController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/MiniMapModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/MiniMapView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Bonuses/BonusController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Bonuses/BonusView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Bonuses/Bonuses.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Enemies/EnemyControl.cs" />
@@ -37,11 +33,35 @@
         <option value="$PROJECT_DIR$/Assets/Code/Camera/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Camera/CameraModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Camera/CameraView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Enemies/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Enemies/EnemyModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Enemies/EnemyView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/GameStarter.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Interfaces/BonusEventTransfer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/SaveLoad/Interface/ISaveData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/SaveLoad/BonusPrefs.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/SaveLoad/SavedData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/SaveLoad/Interface/IActionInterface.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/SaveLoad/JsonActions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/BonusInterfaces/IBonusController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Bonuses/BonusController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/SaveLoad/RepositorySave.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/SaveLoad/SaveController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/EnemyInterfaces/IEnemyView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/EnemyInterfaces/IEnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemies/EnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Enemies/EnemyView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/ScorePills/CollectableController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/CollectableInterfaces/ICollectableController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IScore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/ColectableScore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/ScoreController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameStarter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Editor/MenuItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Editor/ObectAddEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Editor/EditorBeh.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Editor/LoadingBeh.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Editor/DrawPath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Editor/CreateBotWP.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Editor/MenuItems.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Editor/TestEditorWindow.cs" />
       </list>
     </option>
   </component>
@@ -87,6 +107,10 @@
       <updated>1630049941913</updated>
       <workItem from="1630050069886" duration="9032000" />
       <workItem from="1630478770639" duration="11319000" />
+      <workItem from="1630566596549" duration="7442000" />
+      <workItem from="1630653576373" duration="3735000" />
+      <workItem from="1630912360813" duration="4266000" />
+      <workItem from="1631013828733" duration="1896000" />
     </task>
     <servers />
   </component>
@@ -100,10 +124,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040@0.0.1920.1040" timestamp="1630062858768" />
-    <state x="788" y="205" key="RiderGenerateDialog" timestamp="1630494914858">
+    <state x="788" y="205" key="RiderGenerateDialog" timestamp="1630912711742">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="788" y="205" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1630494914858" />
+    <state x="788" y="205" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1630912711742" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1630050573631">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

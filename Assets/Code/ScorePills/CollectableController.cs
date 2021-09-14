@@ -27,6 +27,7 @@ public class CollectableController : ICollectableController
        if (status)
         {
             Debug.Log("hrum-hrum");
+            CollectPill?.Invoke();
             _count--;
             if (_count < 200)  gameEnd = true;
         }

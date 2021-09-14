@@ -4,6 +4,7 @@
     <e p="C:\Users\1\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\1\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Pacman_proj.1992577583.00" t="ExcludeRecursive" />
     <e p="C:\Users\1\Documents\GitHub\Pacman_proj" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Code" t="Include">
@@ -20,6 +21,15 @@
             <e p="CameraController.cs" t="Include" />
             <e p="CameraModel.cs" t="Include" />
             <e p="CameraView.cs" t="Include" />
+          </e>
+          <e p="Editor" t="Include">
+            <e p="CreateBotWP.cs" t="Include" />
+            <e p="DrawPath.cs" t="Include" />
+            <e p="EditorBeh.cs" t="Include" />
+            <e p="LoadingBeh.cs" t="Include" />
+            <e p="MenuItems.cs" t="Include" />
+            <e p="ObectAddEditor.cs" t="Include" />
+            <e p="TestEditorWindow.cs" t="Include" />
           </e>
           <e p="Enemies" t="Include">
             <e p="EnemyController.cs" t="Include" />
@@ -40,6 +50,7 @@
               <e p="ICameraModel.cs" t="Include" />
               <e p="ICameraView.cs" t="Include" />
             </e>
+            <e p="ColectableScore.cs" t="Include" />
             <e p="CollectableInterfaces" t="Include">
               <e p="ICollectableController.cs" t="Include" />
               <e p="ICollectableModel.cs" t="Include" />
@@ -51,6 +62,7 @@
               <e p="IEnemyView.cs" t="Include" />
             </e>
             <e p="IDisposable.cs" t="Include" />
+            <e p="IScore.cs" t="Include" />
             <e p="MiniMapInterfaces" t="Include">
               <e p="IMiniMapController.cs" t="Include" />
               <e p="IMinimapModel.cs" t="Include" />
@@ -68,16 +80,33 @@
             <e p="PlayerModel.cs" t="Include" />
             <e p="PlayerView.cs" t="Include" />
           </e>
+          <e p="SaveLoad" t="Include">
+            <e p="BonusPrefs.cs" t="Include" />
+            <e p="Interface" t="Include">
+              <e p="IActionInterface.cs" t="Include" />
+              <e p="ISaveData.cs" t="Include" />
+            </e>
+            <e p="JsonActions.cs" t="Include" />
+            <e p="RepositorySave.cs" t="Include" />
+            <e p="SaveController.cs" t="Include" />
+            <e p="SavedData.cs" t="Include" />
+          </e>
           <e p="ScorePills" t="Include">
             <e p="CollectableController.cs" t="Include" />
             <e p="CollectableModel.cs" t="Include" />
             <e p="CollectableView.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
-            <e p="MiniMapController.cs" t="Include" />
-            <e p="MiniMapModel.cs" t="Include" />
-            <e p="MiniMapView.cs" t="Include" />
+            <e p="MiniMap" t="Include">
+              <e p="MiniMapController.cs" t="Include" />
+              <e p="MiniMapModel.cs" t="Include" />
+              <e p="MiniMapView.cs" t="Include" />
+            </e>
+            <e p="ScoreController.cs" t="Include" />
           </e>
+        </e>
+        <e p="dataSave" t="Include">
+          <e p="data.txt" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
