@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class EnemyView : MonoBehaviour, IEnemyView, IDisposable
 {
@@ -21,10 +19,8 @@ public class EnemyView : MonoBehaviour, IEnemyView, IDisposable
 
     private void OnTriggerEnter(Collider other)
     {
-        if (IsFleeing && other.GetComponent<PlayerView>())
-        {
-            OnKill?.Invoke();
-            Dispose(gameObject);
-        }
+        if (!IsFleeing || !other.GetComponent<PlayerView>()) return;
+        OnKill?.Invoke();
+        Dispose(gameObject);
     }
 }

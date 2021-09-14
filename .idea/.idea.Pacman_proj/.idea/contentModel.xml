@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\1\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\1\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Pacman_proj.1992577583.00" t="ExcludeRecursive" />
+    <e p="C:\Users\1\Documents\GitHub\Pacman_proj" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Code" t="Include">
+          <e p="Bonuses" t="Include">
+            <e p="BonusController.cs" t="Include" />
+            <e p="BonusModel.cs" t="Include" />
+            <e p="BonusView.cs" t="Include" />
+            <e p="Markers" t="Include">
+              <e p="Marker_bad.cs" t="Include" />
+              <e p="Marker_good.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Camera" t="Include">
+            <e p="CameraController.cs" t="Include" />
+            <e p="CameraModel.cs" t="Include" />
+            <e p="CameraView.cs" t="Include" />
+          </e>
+          <e p="Enemies" t="Include">
+            <e p="EnemyController.cs" t="Include" />
+            <e p="EnemyModel.cs" t="Include" />
+            <e p="EnemyView.cs" t="Include" />
+          </e>
+          <e p="GameStarter.cs" t="Include" />
+          <e p="hw7.cs" t="Include" />
+          <e p="Interfaces" t="Include">
+            <e p="BonusEventTransfer.cs" t="Include" />
+            <e p="BonusInterfaces" t="Include">
+              <e p="IBonusController.cs" t="Include" />
+              <e p="IBonusModel.cs" t="Include" />
+              <e p="IBonusView.cs" t="Include" />
+            </e>
+            <e p="CameraInterfaces" t="Include">
+              <e p="ICameraController.cs" t="Include" />
+              <e p="ICameraModel.cs" t="Include" />
+              <e p="ICameraView.cs" t="Include" />
+            </e>
+            <e p="CollectableInterfaces" t="Include">
+              <e p="ICollectableController.cs" t="Include" />
+              <e p="ICollectableModel.cs" t="Include" />
+              <e p="ICollectableView.cs" t="Include" />
+            </e>
+            <e p="EnemyInterfaces" t="Include">
+              <e p="IEnemyController.cs" t="Include" />
+              <e p="IEnemyModel.cs" t="Include" />
+              <e p="IEnemyView.cs" t="Include" />
+            </e>
+            <e p="IDisposable.cs" t="Include" />
+            <e p="MiniMapInterfaces" t="Include">
+              <e p="IMiniMapController.cs" t="Include" />
+              <e p="IMinimapModel.cs" t="Include" />
+              <e p="IMinimapView.cs" t="Include" />
+            </e>
+            <e p="PlayerInterfaces" t="Include">
+              <e p="IPlayerController.cs" t="Include" />
+              <e p="IPlayerModel.cs" t="Include" />
+              <e p="IPlayerView.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Player" t="Include">
+            <e p="PlayerBonusCollecting.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
+            <e p="PlayerModel.cs" t="Include" />
+            <e p="PlayerView.cs" t="Include" />
+          </e>
+          <e p="ScorePills" t="Include">
+            <e p="CollectableController.cs" t="Include" />
+            <e p="CollectableModel.cs" t="Include" />
+            <e p="CollectableView.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="MiniMapController.cs" t="Include" />
+            <e p="MiniMapModel.cs" t="Include" />
+            <e p="MiniMapView.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Pacman_proj.sln" t="IncludeFlat" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

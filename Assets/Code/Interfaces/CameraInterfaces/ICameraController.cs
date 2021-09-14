@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface ICameraController 
 {
-    void Shake(float duration);
+    void Shake();
 
     void OnInit();
 }
